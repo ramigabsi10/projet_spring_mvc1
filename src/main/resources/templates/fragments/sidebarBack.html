@@ -1,0 +1,47 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+</head>
+<body>
+	<div th:fragment="sidebar">
+	
+	   <div class="nk-sidebar">           
+            <div class="nk-nav-scroll">
+                <ul class="metismenu" id="menu">
+                    <li>
+                        <a th:href="@{/dashboard}" aria-expanded="false">
+                            <i class="icon-speedometer menu-icon"></i><span class="nav-text" >dashboard</span>
+                        </a>
+                    </li>
+                    <li class="mega-menu mega-menu-sm">
+                        <a th:href="@{/providers/list}" aria-expanded="false">
+                            <i class="icon-globe-alt menu-icon"></i><span class="nav-text">providers</span>
+                        </a>
+                       
+                    </li>
+                    <li>
+                        <a th:href="@{/article/list}" aria-expanded="false">
+                            <i class="icon-envelope menu-icon"></i> <span class="nav-text">articles</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                            <i class="icon-screen-tablet menu-icon"></i><span class="nav-text">security</span>
+                        </a>
+                        <ul aria-expanded="false">
+                            <li><a th:href="@{/accounts/list}">users</a></li>
+                            <li><a th:href="@{/role/list}">roles</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a th:href="@{/news/list}" aria-expanded="false">
+                            <i class="icon-graph menu-icon"></i> <span class="nav-text">actuality</span>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+</body>
+</html>
